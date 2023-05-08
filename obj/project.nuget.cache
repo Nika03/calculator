@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WoTnV7sPlxIFb54KlFFFXWjrJ2W0cCGtKsmw7unFbBL47hZl1luYvsYDI+BySO8deYiZKAACe+mn78RamYPzdA==",
+  "success": true,
+  "projectFilePath": "/home/nika/calculator/calculator.csproj",
+  "expectedPackageFiles": [
+    "/home/nika/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.3/microsoft.aspnetcore.app.ref.7.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

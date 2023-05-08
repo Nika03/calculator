@@ -1,0 +1,15 @@
+/home/nika/calculator/bin/Debug/net7.0/calculator
+/home/nika/calculator/bin/Debug/net7.0/calculator.deps.json
+/home/nika/calculator/bin/Debug/net7.0/calculator.runtimeconfig.json
+/home/nika/calculator/bin/Debug/net7.0/calculator.dll
+/home/nika/calculator/bin/Debug/net7.0/calculator.pdb
+/home/nika/calculator/obj/Debug/net7.0/calculator.csproj.AssemblyReference.cache
+/home/nika/calculator/obj/Debug/net7.0/calculator.GeneratedMSBuildEditorConfig.editorconfig
+/home/nika/calculator/obj/Debug/net7.0/calculator.AssemblyInfoInputs.cache
+/home/nika/calculator/obj/Debug/net7.0/calculator.AssemblyInfo.cs
+/home/nika/calculator/obj/Debug/net7.0/calculator.csproj.CoreCompileInputs.cache
+/home/nika/calculator/obj/Debug/net7.0/calculator.dll
+/home/nika/calculator/obj/Debug/net7.0/refint/calculator.dll
+/home/nika/calculator/obj/Debug/net7.0/calculator.pdb
+/home/nika/calculator/obj/Debug/net7.0/calculator.genruntimeconfig.cache
+/home/nika/calculator/obj/Debug/net7.0/ref/calculator.dll
