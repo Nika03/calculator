@@ -15,9 +15,13 @@ internal class Program
         double tryDouble2;
         // doubles for TryParse
 
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("Nika's Shitty Ass Fuckin' Calculator(tm)");
 
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("Input first value: ");
+
+        Console.ForegroundColor = ConsoleColor.White;
         string? tempNum1 = Console.ReadLine();
         // string will be what the user inputs, it will be constant during the if statement
 
@@ -33,14 +37,24 @@ internal class Program
             else
             {
                 // otherwise throw a fit and keep asking the user to input the value until it's right
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: Not a Number");
+
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write("Input first value: ");
+
+                Console.ForegroundColor = ConsoleColor.White;
 
                 while (!double.TryParse(Console.ReadLine(), out tryDouble1))
                 // while the TryParse is failing, keep prompting (here's the '!' again)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Error: Not a Number");
+
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("Input first value: ");
+
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
 
                 num1 = tryDouble1;
@@ -51,7 +65,10 @@ internal class Program
 
         // this repeats again with the second value
 
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("Input second value: ");
+
+        Console.ForegroundColor = ConsoleColor.White;
         string? tempNum2 = Console.ReadLine();
 
         if (!string.IsNullOrEmpty(tempNum2))
@@ -62,12 +79,23 @@ internal class Program
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Error: Not a Number");
+
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write("Input second value: ");
+
+                Console.ForegroundColor = ConsoleColor.White;
+
                 while (!double.TryParse(Console.ReadLine(), out tryDouble2))
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Error: Not a Number");
+
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("Input second value: ");
+
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
                 num2 = tryDouble2;
             }
@@ -75,18 +103,19 @@ internal class Program
         }
         
         bool isCorrect = false;
-        //while (option != "+" || option != "-" || option != "*" || option != "/")
         
         while (!isCorrect)
         {    
             isCorrect = false;
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("What do you want to do with these values?");
             Console.WriteLine("\t+ Addition");
             Console.WriteLine("\t- Subtraction");
             Console.WriteLine("\t* Multiplication");
             Console.WriteLine("\t/ Division");
 
+            Console.ForegroundColor = ConsoleColor.White;
             string? option = Console.ReadLine();
 
             switch (option)
@@ -94,19 +123,28 @@ internal class Program
                 case "+":
                     isCorrect = true;
                     result = num1 + num2;
+
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Your magic number: {num1} + {num2} = " + result);
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
 
                 case "-":
                     isCorrect = true;
                     result = num1 - num2;
+
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Your magic number: {num1} - {num2} = " + result);
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
 
                 case "*":
                     isCorrect = true;
                     result = num1 * num2;
+
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Your magic number: {num1} * {num2} = " + result);
+                    Console.ForegroundColor = ConsoleColor.White;
                     break;
 
                 case "/":
@@ -114,16 +152,22 @@ internal class Program
                     result = num1 / num2;
                     if (result == double.PositiveInfinity)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine($"Error: Devide by zero exception -> {num1} / {num2}");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Your magic number: {num1} / {num2} = " + result);
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     break;
 
                 default:
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Error: Invalid operator");
+                    Console.ForegroundColor = ConsoleColor.White;
                     isCorrect = false;
                     continue;
             }
@@ -131,6 +175,8 @@ internal class Program
             break;
         } 
 
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Press any key to continue...");
         Console.ReadKey();
     }
    
