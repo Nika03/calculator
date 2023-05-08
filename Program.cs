@@ -73,20 +73,22 @@ internal class Program
             }
 
         }
-
-        Console.WriteLine("What do you want to do with these values?");
-        Console.WriteLine("\t+ Addition");
-        Console.WriteLine("\t- Subtraction");
-        Console.WriteLine("\t* Multiplication");
-        Console.WriteLine("\t/ Division");
-
-        string? option = Console.ReadLine();
-    
+        
         bool isCorrect = false;
-
         //while (option != "+" || option != "-" || option != "*" || option != "/")
-        do
-        {
+        
+        while (!isCorrect)
+        {    
+            isCorrect = false;
+
+            Console.WriteLine("What do you want to do with these values?");
+            Console.WriteLine("\t+ Addition");
+            Console.WriteLine("\t- Subtraction");
+            Console.WriteLine("\t* Multiplication");
+            Console.WriteLine("\t/ Division");
+
+            string? option = Console.ReadLine();
+
             switch (option)
             {
                 case "+":
@@ -119,12 +121,15 @@ internal class Program
                         Console.WriteLine($"Your magic number: {num1} / {num2} = " + result);
                     }
                     break;
-                
+
                 default:
-                    return;
+                    Console.WriteLine("Error: Invalid operator");
+                    isCorrect = false;
+                    continue;
             }
 
-        } while (!isCorrect);
+            break;
+        } 
 
         Console.ReadKey();
     }
